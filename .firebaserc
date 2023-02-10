@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-79b2c": {
+      "hosting": {
+        "zedric": [
+          "angular-79b2c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-79b2c"
+  }
+}
