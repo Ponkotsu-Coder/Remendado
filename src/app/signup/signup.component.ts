@@ -23,8 +23,8 @@ export class SignupComponent implements OnInit {
         const user = userCredential.user;
 
         set(ref(this.database, 'users/' + user.uid), {
-          username: value.username,
-          email: value.email
+          email: value.email,
+          password: value.password
         });
 
         alert('user created! ');
@@ -41,34 +41,3 @@ export class SignupComponent implements OnInit {
 
 
 }
-
-  // }
-
-
-  // registerUser(value: any) {
-  //   createUserWithEmailAndPassword(this.auth, value.email, value.password)
-  //     .then((userCredential) => {
-  //       // Signed in 
-  //       const user = userCredential.user;
-
-  //       set(ref(this.database, 'users/' + user.uid), {
-  //         username: value.username,
-  //         email: value.email
-  //       });
-
-  //       alert('user created! ');
-  //       // ...
-  //     })
-  //     .catch((error) => {
-  //       const errorCode = error.code;
-  //       const errorMessage = error.message;
-
-  //       alert(errorMessage);
-  //       // ..
-  // //     });
-  // }
-
-
-
-
- 

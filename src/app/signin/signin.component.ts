@@ -13,7 +13,7 @@ import { Database, set, ref, update } from '@angular/fire/database';
 export class SigninComponent implements OnInit {
 
   constructor(public auth: Auth, public database: Database) { }
-  registerUser(value: any) {
+  logUser(value: any) {
 
     signInWithEmailAndPassword(this.auth, value.email, value.password)
       .then((userCredential) => {
@@ -36,7 +36,6 @@ export class SigninComponent implements OnInit {
         alert(errorMessage)
       });
   }
-
   ngOnInit(): void {
   }
 
